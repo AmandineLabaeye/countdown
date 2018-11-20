@@ -22,11 +22,11 @@
 
 </header>
 
-<section class="container mb-5 mt-5">
+<section class="container mb-5 mt-3">
 
     <div class="row">
 
-        <div class="col-sm-12 text-center mt-4 mb-4">
+        <div class="col-sm-12 text-center mt-4 mb-5">
 
             <h2><strong> Temps restant : </strong></h2>
 
@@ -36,43 +36,49 @@
 
     <div class="row">
 
-        <div class="col-sm-3 text-center"></div>
+        <div class="col-sm-2 text-center"></div>
 
-        <div class="col-sm-6 text-center">
+        <div class="col-sm-8 text-center">
 
             <strong>
 
-                <label><input id="Minutes" class="text-center" value="0" min="0" max="60" size="2"></label>
+                <label><input id="Heures" class="text-center" type="number" value="0" min="0" max="24"></label>
 
-                <label><input id="Secondes" class="text-center" value="0" min="0" max="60" size="2"></label>
+                <label><input id="Minutes" class="text-center" type="number" value="0" min="0" max="60"></label>
+
+                <label><input id="Secondes" class="text-center" type="number" value="0" min="0" max="60"></label>
 
             </strong>
 
         </div>
 
-        <div class="col-sm-3 text-center"></div>
+        <div class="col-sm-2 text-center"></div>
 
     </div>
 
     <div class="row">
 
-        <div class="col-sm-3 text-center mb-5"></div>
+        <div class="col-sm-3 text-center mt-2 mb-5"></div>
 
-        <div id="countdown" class="col-sm-6 text-center mb-5">
+        <div id="countdown" class="col-sm-6 text-center mt-3 mb-5">
 
             <strong>
 
-                <span id="Minute"> 00 </span>
+                <span id="Heure"></span>
 
                 <span> : </span>
 
-                <span id="Seconde"> 00 </span>
+                <span id="Minute"></span>
+
+                <span> : </span>
+
+                <span id="Seconde"></span>
 
             </strong>
 
         </div>
 
-        <div class="col-sm-3 text-center mb-5"></div>
+        <div class="col-sm-3 text-center mt-2 mb-5"></div>
 
     </div>
 
@@ -80,7 +86,7 @@
 
         <div class="col-sm-12 text-center mb-5">
 
-            <button id="Add" type="button" class="btn"> Mettre à jour ! </button>
+            <button id="Add" type="button" class="btn"> Mise à jour <br> Des valeur entrée </button>
 
         </div>
 
@@ -88,21 +94,39 @@
 
     <div class="row">
 
-        <div class="col-sm-6 text-center mb-5 mt-5">
+        <div class="col-sm-4 text-center mb-5 mt-4">
 
-            <button id="Play" class="btn" type="button"> Let's Go ! </button>
+            <button id="Play" class="btn" type="button"> Play </button>
 
         </div>
 
-        <div class="col-sm-6 text-center mb-5 mt-5">
+        <div class="col-sm-4 text-center mb-5 mt-4"></div>
 
-            <button id="Reset" class="btn" type="button"> Reset ! </button>
+
+        <div class="col-sm-4 text-center mb-5 mt-4">
+
+            <button id="Stop" class="btn" type="button"> Pause </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<footer class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-sm-12 text-center mb-5 mt-5">
+
+            <button id="Reset" class="btn" type="button"> Reset </button>
 
         </div>
 
     </div>
 
-</section>
+</footer>
 
 <script src="CompteRebours.js"></script>
 

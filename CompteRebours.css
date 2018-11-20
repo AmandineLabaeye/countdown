@@ -1,6 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     background-color: black;
     color: white;
+}
+
+footer {
+    background-color: black;
 }
 
 span {
@@ -9,4 +18,21 @@ span {
 
 h2 {
     text-decoration: underline black;
+}
+
+#Reset {
+    background-color: white;
+    color: black;
+}
+
+button {
+    background-color: black;
+    color: white;
+}
+
+#countdown {
+    border: black solid;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
 }

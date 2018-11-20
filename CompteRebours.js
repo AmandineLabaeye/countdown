@@ -1,61 +1,109 @@
-var Base = new Date ("00:00:00");
+var ChampsHeure = document.getElementById("Heures").value;
 
 var ChampsMinute = document.getElementById("Minutes").value;
 
 var ChampsSeconde = document.getElementById("Secondes").value;
 
+var Heure = document.getElementById("Heure");
+
+var Minute = document.getElementById("Minute");
+
+var Seconde = document.getElementById("Seconde");
+
+Heure.innerHTML = "0";
+
+Minute.innerHTML = "0";
+
+Seconde.innerHTML = "0";
+
+var count;
+var sec = 59;
+var heu = 23;
+var min = 59;
+
 document.getElementById("Add").addEventListener("click", function () {
+
+    ChampsHeure = document.getElementById("Heures").value;
 
     ChampsMinute = document.getElementById("Minutes").value;
 
     ChampsSeconde = document.getElementById("Secondes").value;
 
-document.getElementById("Minute").innerHTML = ChampsMinute;
+Minute.innerHTML = ChampsMinute;
 
-document.getElementById("Seconde").innerHTML = ChampsSeconde;
+Seconde.innerHTML = ChampsSeconde;
+
+Heure.innerHTML = ChampsHeure;
 
 });
 
 var countdown;
-var count;
 
 document.getElementById("Play").addEventListener("click", function () {
 
-    Secondess  = function () {
+      countdown = function () {
+
+          clearTimeout(count);
+
+        count = setTimeout(countdown, 1000);
+
+        Heure.innerHTML = ChampsHeure;
+        Minute.innerHTML = ChampsMinute;
+        Seconde.innerHTML = ChampsSeconde--;
 
 
 
-    if (ChampsSeconde >= 0) {
+    if (ChampsSeconde == -1 && ChampsMinute != 0) {
 
-        count = setTimeout(Secondess, 1000);
-        document.getElementById("Seconde").innerHTML = ChampsSeconde--;
+        ChampsSeconde = sec--;
 
-    } else {
-
-        clearTimeout();
+        Minute.innerHTML = ChampsMinute--;
 
     }
 
-    };
+    if (ChampsMinute == 0 && ChampsHeure !=0 && ChampsSeconde == -1) {
 
-    Minutess = function () {
+        ChampsSeconde = sec;
+        ChampsMinute = min;
+        ChampsHeure--;
 
-        if (ChampsMinute >= 0) {
 
-            count = setTimeout(Minutess, 1000);
-            document.getElementById("Minute").innerHTML = ChampsMinute--;
+    }
 
-        } else {
+    if (ChampsSeconde == -1) {
 
-            clearTimeout();
+            if (ChampsMinute <= 0) {
+
+                if (ChampsHeure <= 0) {
+
+                clearTimeout(count);
+
+                }
+            }
 
         }
 
     };
 
-    Secondess();
-    Minutess();
+    setTimeout(countdown, 1000);
+
 
 });
 
+
+
+document.getElementById("Stop").addEventListener("click",
+
+    function Stop () {
+
+        clearTimeout(count);
+
+    });
+
+
+document.getElementById("Reset").addEventListener("click", function () {
+
+    location.reload();
+
+});
 

@@ -85,8 +85,17 @@ document.getElementById("Play").addEventListener("click", function () {
 
     };
 
+      if (ChampsHeure == 0 && ChampsMinute == 0 && ChampsSeconde == -1) {
+
+          ChampsSeconde = sec;
+          ChampsMinute = min;
+          ChampsHeure = heu;
+
+      }
+
     setTimeout(countdown, 1000);
 
+    document.getElementById("Play").style.display = "none";
 
 });
 
@@ -97,6 +106,7 @@ document.getElementById("Stop").addEventListener("click",
     function Stop () {
 
         clearTimeout(count);
+        document.getElementById("Play").style.display = "block";
 
     });
 

@@ -1,6 +1,10 @@
 body {
     margin: 0;
     padding: 0;
+    background-image: url("https://ae01.alicdn.com/kf/HTB11bytOXXXXXawaFXXq6xXFXXXH/Howmay-100-seda-pura-tecido-chiffon-5-5-m-m-55-140-cm-natural-branco-de.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
 
 header {
